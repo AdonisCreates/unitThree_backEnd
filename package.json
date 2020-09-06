@@ -1,0 +1,26 @@
+{
+  "name": "unitthree_backend",
+  "version": "1.0.0",
+  "description": "Using the MERN stack: Node.js, Mongoose, Express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdonisCreates/unitThree_backEnd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdonisCreates/unitThree_backEnd/issues"
+  },
+  "homepage": "https://github.com/AdonisCreates/unitThree_backEnd#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "querystring": "^0.2.0",
+    "request": "^2.88.2",
+    "spotify-web-api-node": "^4.0.0"
+  }
+}
