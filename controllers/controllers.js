@@ -9,6 +9,9 @@ res.send('Index')
 });
 
 // New
+router.get('/new' , (req, res)=>{
+    res.send('New');
+});
 
 // Delete/DESTROY
 
