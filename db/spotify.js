@@ -69,15 +69,9 @@ router.get('/callback', function(req, res) {
                 let access_token = body.access_token,
                     refresh_token = body.refresh_token;
 
-                let options = {
-                    url: 'https://api.spotify.com/v1/search?q=artist:Drake',
-                    headers: { 'Authorization': 'Bearer ' + access_token },
-                    json: true
-                };
-
                 spotifyApi.setAccessToken(access_token)
                 spotifyApi.setRefreshToken(refresh_token)
-                res.redirect('/home')
+                // res.redirect('/home')
 
                 // // we can also pass the token to the browser to make requests from there
                 // res.redirect('http://localhost:8888/#' +
@@ -85,6 +79,7 @@ router.get('/callback', function(req, res) {
                 //         access_token: access_token,
                 //         refresh_token: refresh_token
                 //     }));
+                res.redirect('/home')
             } else {
                 res.redirect('/#' +
                     querystring.stringify({
@@ -94,5 +89,28 @@ router.get('/callback', function(req, res) {
         });
     }
 });
+
+router.get('/home', (req, res)=> {
+    res.send('home')
+})
+
+router.get('/home/:searchTerm', (req, res) => {
+// switch (req.body.type) {
+//     case ('artist'):
+    let specific = []
+        spotifyApi.searchArtists(req.params.searchTerm).then(
+            function(data) {
+                data.body.artists.items.map((dataItem, index)=> {
+                    specific.push({
+                        name: dataItem.name,
+                        type: dataItem.type,
+                        img: dataItem.img,
+                        genres: dataItem.genres
+                    })
+                })
+                res.send(specific)
+            }
+        )
+})
 
 module.exports = router;
