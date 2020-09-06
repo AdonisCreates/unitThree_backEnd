@@ -1,15 +1,15 @@
-const path = require("path");
-const express = require("express");
+const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 8000;
-require("dotenv").config();
+require('dotenv').config();
+const cors = require("cors");
+const PORT = process.env.PORT || 8888;
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/'+ `Spotify`;
+//middleware
+app.use(cors());
+// app.use(express.json());
 
-//   // Middleware
-// //////////////////////////
+app.use('/', require('./db/spotify.js'))
 
-app.use(express.json());
-app.use(express.static("build"));
-
-app.listen(PORT, () => console.log("Listening on port:", PORT));
+app.listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`)
+});
