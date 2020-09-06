@@ -96,7 +96,9 @@ router.get("/callback", function(req, res) {
 });
 
 router.get("/home", (req, res) => {
-  res.send("home");
+  res.send(
+    "This is the home screen. To search for an artist, add to the url above a forward slash and the name of the artist you wish to find! It should look like 'localhost:8000/home/drake'!"
+  );
 });
 
 router.get("/home/:searchTerm", (req, res) => {

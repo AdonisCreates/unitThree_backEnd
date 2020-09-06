@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b908f8e5-b04d-4310-9235-e7b72856fc4a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/spotify.js" beforeDir="false" afterPath="$PROJECT_DIR$/db/spotify.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599401969856</updated>
-      <workItem from="1599401971048" duration="9305000" />
+      <workItem from="1599401971048" duration="9626000" />
     </task>
     <servers />
   </component>
