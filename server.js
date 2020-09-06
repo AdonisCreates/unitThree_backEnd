@@ -7,6 +7,8 @@ const PORT = process.env.PORT || 8888;
 
 //middleware
 app.use(cors());
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: false}));
 // app.use(express.json());
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/'+ `Spotify`;
@@ -17,6 +19,10 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true 
 mongoose.connection.once('open', () => {
     console.log("connected to mongoDB-StockX-BABYYY");
 })
+
+// Controllers
+const spotifyController = require('./controllers/controllers.js');
+app.use('/spotify', spotifyController);
 
 app.use('/', require('./db/spotify.js'))
 
