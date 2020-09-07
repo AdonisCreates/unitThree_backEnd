@@ -105,13 +105,20 @@ router.get("/home/:searchTerm", (req, res) => {
   // switch (req.body.type) {
   //     case ('artist'):
   let specific = [];
-  spotifyApi.searchArtists(req.params.searchTerm).then(function(data) {
-    data.body.artists.items.map((dataItem, index) => {
+  spotifyApi.searchTracks(req.params.searchTerm).then(function(data) {
+    console.log(data.body.tracks);
+    data.body.tracks.items.map(dataItem => {
       specific.push({
         name: dataItem.name,
-        type: dataItem.type,
-        img: dataItem.images,
-        genres: dataItem.genres
+        artists: dataItem.artists.map(artist => {
+          return artist.name;
+        }),
+        albumURL: {
+          albumName: dataItem.album.name,
+          albumImg: dataItem.album.images.map(img => {
+            return img.url;
+          })
+        }
       });
     });
     res.send(specific);
