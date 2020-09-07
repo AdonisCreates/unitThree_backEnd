@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Spotify = require('../models/artistSchema.js');
+const Spotify = require('../models/track.js');
 
 // Index Route
 
@@ -20,8 +20,6 @@ router.get('/new' , (req, res)=>{
 // Create 
 
 // Edit
-
-// Patch
 
 // Show
 

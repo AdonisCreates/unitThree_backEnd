@@ -21,8 +21,11 @@ mongoose.connection.once('open', () => {
 })
 
 // Controllers
-const spotifyController = require('./controllers/controllers.js');
-app.use('/spotify', spotifyController);
+const trackController = require('./controllers/trackController.js');
+app.use('/spotify', trackController);
+
+const playlistController = require('./controllers/playlistController.js');
+app.use('/playlist', playlistController);
 
 app.use('/', require('./db/spotify.js'))
 
