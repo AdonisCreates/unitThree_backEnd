@@ -21,6 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b908f8e5-b04d-4310-9235-e7b72856fc4a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/playlistController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/trackController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/trackController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599401969856</updated>
-      <workItem from="1599401971048" duration="14855000" />
+      <workItem from="1599401971048" duration="16013000" />
     </task>
     <servers />
   </component>
@@ -78,6 +81,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="2351" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599491925447">
+      <screen x="1440" y="-157" width="1920" height="989" />
+    </state>
+    <state x="2351" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/1440.-157.1920.989@1440.-157.1920.989" timestamp="1599491925447" />
     <state x="1440" y="-24" key="SettingsEditor" timestamp="1599423239998">
       <screen x="1440" y="-157" width="1920" height="989" />
     </state>
