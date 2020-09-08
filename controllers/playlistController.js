@@ -1,20 +1,20 @@
 const express = require("express");
 const router = express.Router();
-const Dog = require("../models/track.js");
+const Playlist = require("../models/playlist.js");
 
 // Index
 router.get("/", (req, res) => {
   // Use Dog model to get all Dogs
-  Dog.find({}, (error, allDogs) => {
-    error ? res.status(404).json(error) : res.status(200).json(allDogs);
+  Playlist.find({}, (error, allPlaylist) => {
+    error ? res.status(404).json(error) : res.status(200).json(allPlaylist);
   });
 });
 
 // Delete
 router.delete("/:id", (req, res) => {
   // Delete document from collection
-  Dog.findByIdAndRemove(req.params.id, (err, dog) => {
-    error ? res.status(404).json(error) : res.status(200).json(dog);
+  Playlist.findByIdAndRemove(req.params.id, (err, playlist) => {
+    error ? res.status(404).json(error) : res.status(200).json(playlist);
   });
 });
 
@@ -22,12 +22,12 @@ router.delete("/:id", (req, res) => {
 router.put("/:id", (req, res) => {
   console.log(req.body);
   // Update the dog document using our model
-  Dog.findByIdAndUpdate(
+  Playlist.findByIdAndUpdate(
     req.params.id,
     req.body,
     { new: true },
-    (err, updatedDog) => {
-      error ? res.status(404).json(error) : res.status(200).json(updatedDog);
+    (err, updatedPlaylist) => {
+      error ? res.status(404).json(error) : res.status(200).json(updatedPlaylist);
     }
   );
 });
@@ -36,18 +36,18 @@ router.put("/:id", (req, res) => {
 router.post("/", (req, res) => {
   console.log(req.body);
   // Use Model to create Dog Document
-  Dog.create(req.body, (error, createdDog) => {
+  Playlist.create(req.body, (error, createdPlaylist) => {
     // Once created - respond to client
-    error ? res.status(404).json(error) : res.status(200).json(createdDog);
+    error ? res.status(404).json(error) : res.status(200).json(createdPlaylist);
   });
 });
 
 // Show
 router.get("/:id", (req, res) => {
   // Find the specific document
-  Dog.findById(req.params.id, (error, foundDog) => {
+  Playlist.findById(req.params.id, (error, foundPlaylist) => {
     // render the Show route and pass it the foundDog
-    error ? res.status(404).json(error) : res.status(200).json(foundDog);
+    error ? res.status(404).json(error) : res.status(200).json(foundPlaylist);
   });
 });
 
