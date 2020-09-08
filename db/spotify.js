@@ -109,11 +109,11 @@ router.get("/home/:searchTerm", (req, res) => {
     console.log(data.body.tracks);
     data.body.tracks.items.map(dataItem => {
       specific.push({
-        name: dataItem.name,
+        trackName: dataItem.name,
         artists: dataItem.artists.map(artist => {
           return artist.name;
         }),
-        albumURL: {
+        album: {
           albumName: dataItem.album.name,
           albumImg: dataItem.album.images.map(img => {
             return img.url;
