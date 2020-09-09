@@ -1,17 +1,17 @@
-{"engines": {
-  "node": "14.8.0",
-  "yarn": "1.22.5"
-},
+{
+  "engines": {
+    "node": "14.8.0",
+    "yarn": "1.22.5"
+  },
   "name": "unitthree_backend",
   "version": "1.0.0",
   "description": "Using the MERN stack: Node.js, Mongoose, Express",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "react-scripts start",
+    "dev": "nodemon",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "dev": "nodemon"
+    "test": "react-scripts test"
   },
   "repository": {
     "type": "git",
