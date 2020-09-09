@@ -75,7 +75,7 @@ router.get("/callback", function(req, res) {
         spotifyApi.setAccessToken(access_token);
         spotifyApi.setRefreshToken(refresh_token);
         // res.redirect('/home')
-        res.get("https://frontenddspotify.herokuapp.com/");
+        res.redirect("https://frontenddspotify.herokuapp.com/");
       } else {
         res.redirect(
           "/#" +
