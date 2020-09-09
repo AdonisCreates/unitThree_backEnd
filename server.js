@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 8888;
 
 //middleware
 app.use(cors());
+app.use(express.static('build'));
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 // app.use(express.json());
