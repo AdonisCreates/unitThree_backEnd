@@ -8,7 +8,7 @@ const spotifyApi = new SpotifyWebApi();
 
 const client_id = process.env.CLIENT_ID; // Your client id
 const client_secret = process.env.CLIENT_SECRET; // Your secret
-const redirect_uri = "https://backendspotify.herokuapp.com/callback/"; // Or Your redirect uri
+const redirect_uri = "https://backendspotify.herokuapp.com/callback"; // Or Your redirect uri
 
 const generateRandomString = length => {
   let text = "";
@@ -75,7 +75,7 @@ router.get("/callback", function(req, res) {
         spotifyApi.setAccessToken(access_token);
         spotifyApi.setRefreshToken(refresh_token);
         // res.redirect('/home')
-        res.get("https://frontenddspotify.herokuapp.com/");
+        res.redirect("https://frontenddspotify.herokuapp.com/");
       } else {
         res.redirect(
           "/#" +
