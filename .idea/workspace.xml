@@ -22,10 +22,14 @@
     <list default="true" id="b908f8e5-b04d-4310-9235-e7b72856fc4a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/db/spotify.js" beforeDir="false" afterPath="$PROJECT_DIR$/db/spotify.js" afterDir="false" />
 =======
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
 >>>>>>> 418d2d44f79de45513b770d9b7bda7e667c915eb
+=======
+      <change beforePath="$PROJECT_DIR$/db/spotify.js" beforeDir="false" afterPath="$PROJECT_DIR$/db/spotify.js" afterDir="false" />
+>>>>>>> e4cdb469249209bd41f44bb1854dbc937c43849f
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,10 +71,14 @@
       <workItem from="1599401971048" duration="18533000" />
       <workItem from="1599576400429" duration="8586000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1599664818528" duration="5328000" />
 =======
       <workItem from="1599664818528" duration="4573000" />
 >>>>>>> 418d2d44f79de45513b770d9b7bda7e667c915eb
+=======
+      <workItem from="1599664818528" duration="5328000" />
+>>>>>>> e4cdb469249209bd41f44bb1854dbc937c43849f
     </task>
     <servers />
   </component>
