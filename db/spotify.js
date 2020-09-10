@@ -114,7 +114,7 @@ router.get("/home/:searchTerm", (req, res) => {
         }
       });
     });
-    res.send(specific);
+    res.json(specific);
   });
 });
 
