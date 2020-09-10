@@ -9,8 +9,7 @@ const PORT = process.env.PORT || 8888;
 app.use(cors());
 app.use(express.static('build'));
 app.use(express.static("public"));
-app.use(express.urlencoded({ extended: false }));
-// app.use(express.json());
+app.use(express.json());
 
 const MONGODB_URI =
   process.env.MONGODB_URI || "mongodb://localhost/" + `Spotify`;
