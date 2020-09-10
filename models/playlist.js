@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const playlistSchema = new Schema(
   {
-    name: {type: String},
+    name: String,
     tracks: Array,
   },
   {
