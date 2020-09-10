@@ -3,16 +3,8 @@ const Schema = mongoose.Schema;
 
 const playlistSchema = new Schema(
   {
-    name: {
-      type: String,
-      required: true,
-      unique: false
-    },
-    tracks: [
-      {
-        type: Object
-      }
-    ]
+    name: String, required : true,
+    tracks: Array,
   },
   {
     timestamps: true
