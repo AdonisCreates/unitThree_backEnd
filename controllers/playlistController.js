@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
 router.delete("/:id", (req, res) => {
   // Delete document from collection
   Playlist.findByIdAndRemove(req.params.id, (err, playlist) => {
-    error ? res.status(404).json(error) : res.status(200).json(playlist);
+    error ? res.status(404).json(error) : res.status(200);
   });
 });
 
