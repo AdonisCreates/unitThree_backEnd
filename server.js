@@ -4,6 +4,7 @@ require("dotenv").config();
 const cors = require("cors");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 8888;
+const cors_proxy = require('cors-anywhere')
 
 //middleware
 app.use(cors());
@@ -33,6 +34,9 @@ app.use("/playlist", playlistController);
 
 app.use("/", require("./db/spotify.js"));
 
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
-});
+cors_proxy.createServer({
+  originWhitelist: [],
+  requireHeader: [],
+}).listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`);
+  });
